@@ -5,7 +5,7 @@ services:
     image: php:apache
     container_name: http_codes_ondemand
     ports:
-      - 80:80
+      - 1234:80
     network_mode: bridge
     restart: on-failure
     volumes:
