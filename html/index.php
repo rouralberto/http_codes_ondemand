@@ -1,5 +1,7 @@
 <?php
 
+$code_list = json_decode(file_get_contents('codes.json'));
+
 $codes = [
     200 => 'OK',
     301 => 'Moved Permanently',
