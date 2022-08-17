@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  web:
+    image: php:apache
+    container_name: http_codes_ondemand
+    ports:
+      - 80:80
+    network_mode: bridge
+    restart: on-failure
+    volumes:
+      - ./html:/var/www/html
