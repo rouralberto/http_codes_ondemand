@@ -15,7 +15,8 @@ if (!in_array($requested_code, $codes)) {
     exit('Requested HTTP code was not found.');
 }
 
-$code_meta = $code_list[array_search($requested_code, $codes)];
+$key = array_search($requested_code, $codes);
+$code_meta = $code_list[$key];
 
 $response = "HTTP/1.1 ${requested_code} ${code_meta['phrase']}";
 
