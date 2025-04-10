@@ -18,11 +18,11 @@ if (!in_array($requested_code, $codes)) {
 $key = array_search($requested_code, $codes);
 $code_meta = $code_list[$key];
 
-$response = "HTTP/1.1 ${requested_code} ${code_meta['phrase']}";
+$response = "HTTP/1.1 {$requested_code} {$code_meta['phrase']}";
 
 header($response);
 
-echo "<h1>${response}</h1>";
-echo "<dl><dt><a target='_blank' href='${code_meta['spec_href']}'>${code_meta['spec_title']}</a></dt><dd>${code_meta['description']}</dd></dl>";
+echo "<h1>{$response}</h1>";
+echo "<dl><dt><a target='_blank' href='{$code_meta['spec_href']}'>{$code_meta['spec_title']}</a></dt><dd>{$code_meta['description']}</dd></dl>";
 echo "<hr/>";
-echo "<address>${_SERVER['SERVER_SOFTWARE']}</address>";
+echo "<address>roura/http-codes-ondemand - {$_SERVER['SERVER_SOFTWARE']}</address>";
